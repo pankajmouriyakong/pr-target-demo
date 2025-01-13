@@ -11,6 +11,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+      
+      - name: Set ENV
+        run: |
+         echo "hello world"
+        env:
+          FAKE_SECRET_FOR_DEMO: ${{ secrets.FAKE_SECRET_FOR_DEMO }}
 
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -27,9 +33,5 @@ jobs:
         run: |
           echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
           
-      - name: Set ENV
-        run: |
-         echo "hello world"
-        env:
-          FAKE_SECRET_FOR_DEMO: ${{ secrets.FAKE_SECRET_FOR_DEMO }}
+
         
