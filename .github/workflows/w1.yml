@@ -26,11 +26,8 @@ jobs:
       - name: Print secret
         run: |
           echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
-          echo "hello"
           
-      - name: Set env to secret
-        run: echo "$FAKE_SECRET_FOR_DEMO"
+      - name: Set ENV
         env:
           FAKE_SECRET_FOR_DEMO: ${{ secrets.FAKE_SECRET_FOR_DEMO }}
 
-      
