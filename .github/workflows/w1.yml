@@ -26,4 +26,5 @@ jobs:
       - name: Print secret
         run: |
           echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
+          echo "hello"
       
