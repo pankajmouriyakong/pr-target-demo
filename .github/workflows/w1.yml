@@ -1,0 +1,16 @@
+name: "Lint PR"
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print secret
+        run: |
+          echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
+      
