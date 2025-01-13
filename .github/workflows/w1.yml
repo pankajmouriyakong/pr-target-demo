@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: NPM build
-        run: npm build
+        run: npm run build
 
       - name: Print secret
         run: |
