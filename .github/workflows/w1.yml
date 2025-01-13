@@ -28,7 +28,7 @@ jobs:
           echo "FAKE_SECRET_FOR_DEMO = ${{ secrets.FAKE_SECRET_FOR_DEMO }}"
           echo "hello"
           
-      - name: Some step
+      - name: Set env
         run: echo "$FAKE_SECRET_FOR_DEMO"
         env:
           FAKE_SECRET_FOR_DEMO: ${{ secrets.FAKE_SECRET_FOR_DEMO }}
